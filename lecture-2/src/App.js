@@ -12,6 +12,10 @@ function App() {
 
   useEffect(() => {
     const ImageModal = import('./components/ImageModal');
+
+    const img = new Image();
+    img.src =
+      'https://stillmed.olympic.org/media/Photos/2016/08/20/part-1/20-08-2016-Football-Men-01.jpg?interpolation=lanczos-none&resize=*:800';
   }, []);
 
   //   const handleMouseEnter = () => {
