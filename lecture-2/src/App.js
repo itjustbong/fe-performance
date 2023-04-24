@@ -10,11 +10,16 @@ const ImageModal = React.lazy(() => import('./components/ImageModal'));
 function App() {
   const [showModal, setShowModal] = useState(false);
 
+  const handleMouseEnter = () => {
+    const ImageModal = import('./components/ImageModal');
+  };
+
   return (
     <div className="App">
       <Header />
       <InfoTable />
       <ButtonModal
+        onMouseEnter={handleMouseEnter}
         onClick={() => {
           setShowModal(true);
         }}
