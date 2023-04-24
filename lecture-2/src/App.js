@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import styled from 'styled-components';
 import Header from './components/Header';
 import InfoTable from './components/InfoTable';
 import SurveyChart from './components/SurveyChart';
 import Footer from './components/Footer';
-import ImageModal from './components/ImageModal';
+// import ImageModal from './components/ImageModal';
+const ImageModal = React.lazy(() => import('./components/ImageModal'));
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -22,13 +23,15 @@ function App() {
       </ButtonModal>
       <SurveyChart />
       <Footer />
-      {showModal ? (
-        <ImageModal
-          closeModal={() => {
-            setShowModal(false);
-          }}
-        />
-      ) : null}
+      <Suspense fallback={null}>
+        {showModal ? (
+          <ImageModal
+            closeModal={() => {
+              setShowModal(false);
+            }}
+          />
+        ) : null}
+      </Suspense>
     </div>
   );
 }
