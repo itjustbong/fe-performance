@@ -19,7 +19,8 @@
     "build": "npm run build:style && react-scripts build",
     "build:style": "postcss src/tailwind.css -o src/styles.css",
     "serve": "node ./server/server.js",
-    "server": "node ./node_modules/json-server/lib/cli/bin.js --watch ./server/database.json -c ./server/config.json"
+    "server": "node ./node_modules/json-server/lib/cli/bin.js --watch ./server/database.json -c ./server/config.json",
+    "purgecss": "purgecss -css ./build.static/*.css --output ./build/static/ --content ./build/index.html ./build/static/js/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "fontfaceobserver": "^2.3.0"
+  },
+  "devDependencies": {
+    "purgecss": "^5.0.0"
   }
 }
