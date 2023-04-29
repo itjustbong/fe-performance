@@ -1,12 +1,13 @@
 .react-player iframe {
-	height: 100% !important;
+  height: 100% !important;
 }
 
 @font-face {
-	font-family: BMYEONSUNG;
-	src: url('./assets/fonts/BMYEONSUNG.ttf');
+  font-family: BMYEONSUNG;
+  src: url('./assets/fonts/BMYEONSUNG.ttf');
+  font-display: fallback;
 }
 
 .BannerVideo {
-	font-family: 'BMYEONSUNG', sans-serif;
+  font-family: 'BMYEONSUNG', sans-serif;
 }
