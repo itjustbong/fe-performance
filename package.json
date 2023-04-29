@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "fontfaceobserver": "^2.3.0"
+    "fontfaceobserver": "^2.3.0",
+    "react-lazyload": "^3.2.0"
   },
   "devDependencies": {
     "purgecss": "^5.0.0"
